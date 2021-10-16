@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
             Tablica[0] = "Long";
             Intencja.putExtra("Tab",Tablica);
             startActivity(Intencja);
+        }
+        else{
+            Toast.makeText(getApplication(), "Corect Data",
+                    Toast.LENGTH_LONG).show();
         }
     }
 }
