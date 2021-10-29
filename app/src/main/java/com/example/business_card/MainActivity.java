@@ -41,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(Intencja);
         }
         else{
-            Toast.makeText(getApplicationContext(),"Correct data",Toast.LENGTH_SHORT).show();
 
+            Toast.makeText(getApplication(), "Corect Data",
+                    Toast.LENGTH_LONG).show();
         }
     }
 }
