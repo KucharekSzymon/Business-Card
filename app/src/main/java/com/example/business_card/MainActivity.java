@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,10 +35,14 @@ public class MainActivity extends AppCompatActivity {
             Intencja.putExtra("Tab",Tablica);
             startActivity(Intencja);
         }
-        else if(ButtonText.equals("Generate Long Card") && !Tablica[1].equals("") && !Tablica[2].equals("")&& !Tablica[3].equals("") && !Tablica[4].equals("")){
+        else if(ButtonText.equals("Generate Long Card") && !Tablica[1].equals("") && !Tablica[2].equals("")&& !Tablica[3].equals("") && Tablica[3].contains("@") && !Tablica[4].equals("")){
             Tablica[0] = "Long";
             Intencja.putExtra("Tab",Tablica);
             startActivity(Intencja);
+        }
+        else{
+            Toast.makeText(getApplicationContext(),"Correct data",Toast.LENGTH_SHORT).show();
+
         }
     }
 }
